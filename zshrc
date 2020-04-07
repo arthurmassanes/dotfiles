@@ -161,3 +161,4 @@ alias cpl="g++ -Wall -Wextra -Werror *.cpp"
 alias pipes="$HOME/Scripts/pipes"
 alias poesie='cat ~/Documents/Poésie/baudelaire | lolcat'
 alias norme='~/Scripts/NormEZ.rb'
+alias cpuinfo="most /proc/cpuinfo"
