@@ -1,5 +1,5 @@
 # dotfiles
-My comfy config (i3-gaps, rofi, dunst, emacs, i3blocks)
+My comfy config
 
 Last update: **April 09 2020**
 
