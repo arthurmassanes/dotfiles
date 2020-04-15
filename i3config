@@ -22,6 +22,7 @@ for_window [class="^.*"] border pixel 6
 
 # My game in floating mode
 for_window [class="Arcade"] floating enable
+for_window [class="AI Bot Workspace"] floating enable
 
 for_window [class="Thunar"] floating enable
 for_window [class="feh"] floating enable
