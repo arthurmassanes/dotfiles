@@ -49,11 +49,12 @@ bindsym $mod+Shift+t gaps inner current set 15; gaps outer current set 15
 
 # exec
 bindsym $mod+Shift+B exec firefox
-bindsym $mod+Shift+M exec code
 
 # screenshots
 bindsym --release Shift+Print exec "~/Scripts/screenshot.sh -s"
 bindsym --release Print exec "~/Scripts/screenshot.sh"
+
+bindsym $mod+K exec "~/Scripts/kbd.sh"
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -90,7 +91,8 @@ bindsym $mod+d exec rofi -show drun -show-icons
 
 # change focus
 bindsym $mod+j focus left
-bindsym $mod+k focus down
+# not using following line, binding it to kbd layout script
+# bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+ntilde focus right
 
@@ -238,15 +240,10 @@ bindsym XF86MonBrightnessDown exec ~/Scripts/light.sh U #brigthness down
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-exec_always --no-startup-id $HOME/Scripts/bread.sh
-
 exec --no-startup-id nitrogen --set-zoom-fill ~/Pictures/purple.jpg
-
-exec_always --no-startup-id compton --config /home/arthur/.config/compton.conf &
-
+exec_always compton --config /home/arthur/.config/compton.conf
 exec_always pgrep volumeicon || /usr/bin/volumeicon
 # exec_always wal -R
-
 
 
 # Color schemes
