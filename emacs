@@ -175,3 +175,4 @@ There are two things you can do about this warning:
 (put 'downcase-region 'disabled nil)
 
 (global-wakatime-mode)
+
