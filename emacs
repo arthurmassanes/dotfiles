@@ -28,6 +28,11 @@ There are two things you can do about this warning:
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#3c3836" "#fb4933" "#b8bb26" "#fabd2f" "#83a598" "#d3869b" "#8ec07c" "#ebdbb2"])
+ '(company-backends
+   (quote
+    (company-bbdb company-eclim company-semantic company-clang company-xcode company-cmake company-capf company-files
+                  (company-dabbrev-code company-gtags company-etags company-abbrev company-clang)
+                  company-oddmuse company-dabbrev)))
  '(custom-enabled-themes (quote (gruvbox-dark-hard)))
  '(custom-safe-themes
    (quote
@@ -43,7 +48,7 @@ There are two things you can do about this warning:
  '(package-check-signature nil)
  '(package-selected-packages
    (quote
-    (wakatime-mode dracula-theme doom-themes rebecca-theme purple-haze-theme xresources-theme neotree yasnippet zone-nyan multiple-cursors auto-complete-c-headers auto-complete smartparens powerline expand-region gruvbox-theme ace-jump-mode)))
+    (company-c-headers company-irony company irony wakatime-mode dracula-theme doom-themes rebecca-theme purple-haze-theme xresources-theme neotree yasnippet zone-nyan multiple-cursors smartparens powerline expand-region gruvbox-theme ace-jump-mode)))
  '(pdf-view-midnight-colors (quote ("#282828" . "#f9f5d7")))
  '(rustic-ansi-faces
    ["#282a36" "#ff5555" "#50fa7b" "#f1fa8c" "#61bfff" "#ff79c6" "#8be9fd" "#f8f8f2"])
@@ -120,19 +125,6 @@ There are two things you can do about this warning:
 (require 'smartparens-config)
 (smartparens-global-mode 1)
 
-;; auto completion and snippets
-(require 'auto-complete)
-(require 'auto-complete-config)
-(ac-config-default)
-
-;; auto-complete c/c++ headers
-(defun my:ac-c-header-init()
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'achead:include-directories '"/usr/local/include"))
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-(add-hook 'c-mode-hook 'my:ac-c-header-init)
-
 ;; Move lline with alt key VScode-like
 (defun move-line-up ()
   "Move up the current line."
@@ -157,8 +149,6 @@ There are two things you can do about this warning:
 (require 'yasnippet)
 (yas-global-mode 1)
 
-;; (package-install 'auto-yasnippet)
-
 ;; Startup screen
 (require 'dashboard)
 (dashboard-setup-startup-hook)
@@ -176,3 +166,32 @@ There are two things you can do about this warning:
 
 (global-wakatime-mode)
 
+(global-set-key (kbd "C-c u") 'uncomment-region)
+
+;; company setup
+;; Add yasnippet support for all company backends
+(defvar company-mode/enable-yas t
+  "Enable yasnippet for all backends.")
+(defun company-mode/backend-with-yas (backend)
+  (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
+      backend
+    (append (if (consp backend) backend (list backend))
+            '(:with company-yasnippet))))
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-irony))
+
+; Use tab key to cycle through suggestions.
+;; (company-tng-configure-default)
+(setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
+(setq company-idle-delay 0)
+(setq company-minimum-prefix-length 1)
+(setq company-selection-wrap-around t)
+
+;; irony autocomplete
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+(add-to-list 'company-backends 'company-c-headers)
