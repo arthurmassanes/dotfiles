@@ -168,7 +168,8 @@ There are two things you can do about this warning:
 
 (global-set-key (kbd "C-c u") 'uncomment-region)
 
-;; company setup
+;; company/irony setup
+;;
 ;; Add yasnippet support for all company backends
 (defvar company-mode/enable-yas t
   "Enable yasnippet for all backends.")
@@ -181,17 +182,14 @@ There are two things you can do about this warning:
 (add-hook 'after-init-hook 'global-company-mode)
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
-
 ; Use tab key to cycle through suggestions.
 ;; (company-tng-configure-default)
 (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
 (setq company-idle-delay 0)
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-around t)
-
 ;; irony autocomplete
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
-
 (add-to-list 'company-backends 'company-c-headers)
