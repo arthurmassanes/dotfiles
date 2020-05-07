@@ -25,7 +25,7 @@ export PS1="\e[0;33m<\u@\W> \e[m"
 
 alias sl="ls"
 alias e="emacs -nw"
-alias mr_clean="~/Epitech/CPool/CPool_Day01_2018/mr_clean"
+alias mr_clean="~/Scripts/mr_clean_v2"
 alias prepare_my_repo="~/Epitech/CPool/CPool_Day01_2018/prepare_my_repo.sh"
 alias bonjour="cowsay -f stegosaurus 'salut ça va?' | toilet -f term --gay;"
 alias add="~/Scripts/infin_add"

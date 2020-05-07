@@ -105,7 +105,7 @@ eval "$(fasd --init auto)"
 
 alias e="emacs -nw"
 alias snake="/home/arthur/Projects/snake/snake"
-alias mr_clean="~/Epitech/CPool/CPool_Day01_2018/mr_clean"
+alias mr_clean="~/Scripts/mr_clean_v2"
 alias bye="shutdown 0"
 alias l="ls -1"
 alias battery="~/Scripts/battery.sh"
