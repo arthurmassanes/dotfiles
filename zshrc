@@ -75,6 +75,9 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zplug/init.zsh
 zplug "b4b4r07/enhancd", use:init.sh
 
+# fasd
+eval "$(fasd --init auto)"
+
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -163,3 +166,4 @@ alias poesie='cat ~/Documents/Poésie/baudelaire | lolcat'
 alias norme='~/Scripts/NormEZ.rb'
 alias cpuinfo="most /proc/cpuinfo"
 alias aseprite="~/.local/bin/aseprite/aseprite"
+alias d="fasd_cd -d"
