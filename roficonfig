@@ -1,3 +1,4 @@
 rofi.opacity: 100
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
 rofi.width: 25
+rofi.icon-theme: ~/.icons/ePapirus/
