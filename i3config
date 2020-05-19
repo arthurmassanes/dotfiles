@@ -71,7 +71,7 @@ bindsym $mod+K exec "~/Scripts/kbd.sh"
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec st -f "mono:pixelsize=24:antialias=true:autohint=true"
 bindsym $mod+Shift+Return exec st -e "fish"
 
 # kill focused window
