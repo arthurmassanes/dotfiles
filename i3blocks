@@ -14,10 +14,6 @@
 #markup=pango
 #interval=20
 #color=#D44638
-[test]
-command=$HOME/test.sh
-interval=10
-label="yes"
 
 [virus]
 command=$HOME/Scripts/coronavirus.sh
