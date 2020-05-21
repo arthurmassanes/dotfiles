@@ -14,6 +14,10 @@
 #markup=pango
 #interval=20
 #color=#D44638
+[test]
+command=$HOME/test.sh
+interval=10
+label="yes"
 
 [virus]
 command=$HOME/Scripts/coronavirus.sh
@@ -32,7 +36,7 @@ interval=1
 color=#ffdf0f
 
 [wifi]
-command=$HOME/Scripts/wifi.sh
+command=$HOME/Scripts/wifi.sh ; test -z "$BLOCK_BUTTON" || $HOME/Scripts/rofi_wifi.py
 markup=pango
 interval=20
 color=#ffffff

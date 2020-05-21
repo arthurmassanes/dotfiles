@@ -288,7 +288,7 @@ set $volumepath ~/.config/i3/scripts/i3-volume
 
 # Command for the status line (used with -t, requires -u)
 #   ie: i3blocks, i3status
-set $statuscmd i3status
+set $statuscmd i3blocks
 
 # Signal used to update the status line (used with -u, requires -t)
 #   i3blocks uses SIGRTMIN+10 by default
