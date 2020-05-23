@@ -15,6 +15,11 @@
 #interval=20
 #color=#D44638
 
+[gba]
+command=echo "🎮" ; test -z "$BLOCK_BUTTON" || $HOME/Scripts/emu.sh
+interval=once
+color=white
+
 [virus]
 command=$HOME/Scripts/coronavirus.sh
 interval=300
