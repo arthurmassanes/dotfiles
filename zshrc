@@ -157,7 +157,7 @@ alias prepare_my_repo="~/Epitech/CPool/CPool_Day01_2018/prepare_my_repo.sh"
 source ~/Scripts/prep.sh
 alias h="cd ~/Harold/harold-web"
 alias todos="echo \$(ag -c "TODO" src/ | wc -l) things to do"
-alias config_sync="~/Configs/sync.sh"
+alias config_sync="~/Scripts/config_sync.sh"
 alias gotop="gotop --color=vice"
 alias tty-clock="tty-clock -sc -C5"
 alias cpl="g++ -Wall -Wextra -Werror *.cpp"
