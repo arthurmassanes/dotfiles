@@ -167,3 +167,4 @@ alias norme='~/Scripts/NormEZ.rb'
 alias cpuinfo="most /proc/cpuinfo"
 alias aseprite="~/.local/bin/aseprite/aseprite"
 alias d="fasd_cd -d"
+alias simplescreenrecorder="simplescreenrecorder --no-systray"

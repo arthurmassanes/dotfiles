@@ -48,7 +48,7 @@ There are two things you can do about this warning:
  '(package-check-signature nil)
  '(package-selected-packages
    (quote
-    (company-c-headers company-irony company irony wakatime-mode dracula-theme doom-themes rebecca-theme purple-haze-theme xresources-theme neotree yasnippet zone-nyan multiple-cursors smartparens powerline expand-region gruvbox-theme ace-jump-mode)))
+    (company-irony-c-headers company-c-headers company-irony company irony wakatime-mode dracula-theme doom-themes rebecca-theme purple-haze-theme xresources-theme neotree yasnippet zone-nyan multiple-cursors smartparens powerline expand-region gruvbox-theme ace-jump-mode)))
  '(pdf-view-midnight-colors (quote ("#282828" . "#f9f5d7")))
  '(rustic-ansi-faces
    ["#282a36" "#ff5555" "#50fa7b" "#f1fa8c" "#61bfff" "#ff79c6" "#8be9fd" "#f8f8f2"])
@@ -188,8 +188,18 @@ There are two things you can do about this warning:
 (setq company-idle-delay 0)
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-around t)
+
 ;; irony autocomplete
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
+
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+(add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
+;; (setq company-backends (delete 'company-semantic company-backends))
+(require 'company-irony-c-headers)
+(eval-after-load 'company
+  '(add-to-list
+    'company-backends '(company-irony-c-headers company-irony)))
+
 (add-to-list 'company-backends 'company-c-headers)
