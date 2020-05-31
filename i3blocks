@@ -16,44 +16,47 @@
 #color=#D44638
 
 [gba]
-command=echo "🎮" ; test -z "$BLOCK_BUTTON" || $HOME/Scripts/emu.sh
+command=echo "" ; test -z "$BLOCK_BUTTON" || $HOME/Scripts/emu.sh
 interval=once
 color=white
 
 [virus]
 command=$HOME/Scripts/coronavirus.sh
 interval=300
-color=#0af028
+color=#A88FBC
 
 [meteo]
 command=$HOME/Scripts/meteo.sh
 interval=600
-color=#add8e6
+#color=#add8e6
 
 [mem]
 command=free -h | grep "Mem:" | awk '{print $3"/"$2}'
 label=
 interval=1
-color=#ffdf0f
+color=#A88FBC
+#color=#ffdf0f
 
 [wifi]
 command=$HOME/Scripts/wifi.sh ; test -z "$BLOCK_BUTTON" || $HOME/Scripts/rofi_wifi.py
 markup=pango
 interval=20
+label=
 color=#ffffff
 
 [battery]
 command=$HOME/Scripts/i3battery.sh
 interval=3
-color=#ffffff
+color=#A88FBC
+#color=#ffffff
 
-[uptime]
-command=uptime -p
-interval=60
-color=grey
+# [uptime]
+# command=uptime -p
+# interval=60
+# color=grey
 
 [date]
-command=printf "\uf133  %s" "$(date "+%a %d %b %H:%M:%S")"
+command=printf "  %s" "$(date "+%a %d %b %H:%M:%S")"
 #color=#00ff22
 interval=1
 

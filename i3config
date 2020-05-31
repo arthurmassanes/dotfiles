@@ -263,8 +263,8 @@ default_border pixel 5
 bar {
     status_command i3blocks -c .config/i3blocks/config
     Position top
-    font pango: Terminus 15
-    separator_symbol " | "
+    font pango:"Font Awesome 4 Free", Solid 10
+    separator_symbol "  /  "
     height 35
     workspace_buttons yes
 

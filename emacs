@@ -48,7 +48,7 @@ There are two things you can do about this warning:
  '(package-check-signature nil)
  '(package-selected-packages
    (quote
-    (company-irony-c-headers company-c-headers company-irony company irony wakatime-mode dracula-theme doom-themes rebecca-theme purple-haze-theme xresources-theme neotree yasnippet zone-nyan multiple-cursors smartparens powerline expand-region gruvbox-theme ace-jump-mode)))
+    (which-key company-irony-c-headers company-c-headers company-irony company irony wakatime-mode dracula-theme doom-themes rebecca-theme purple-haze-theme xresources-theme neotree yasnippet zone-nyan multiple-cursors smartparens powerline expand-region gruvbox-theme ace-jump-mode)))
  '(pdf-view-midnight-colors (quote ("#282828" . "#f9f5d7")))
  '(rustic-ansi-faces
    ["#282a36" "#ff5555" "#50fa7b" "#f1fa8c" "#61bfff" "#ff79c6" "#8be9fd" "#f8f8f2"])
@@ -203,3 +203,8 @@ There are two things you can do about this warning:
     'company-backends '(company-irony-c-headers company-irony)))
 
 (add-to-list 'company-backends 'company-c-headers)
+
+
+;; which key cheatsheet
+(require 'which-key)
+(which-key-mode)
