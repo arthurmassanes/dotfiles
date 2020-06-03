@@ -10,7 +10,6 @@ source ~/Scripts/prep.sh
 source ~/Scripts/wifipwd.sh
 source ~/Scripts/planning.sh
 source ~/Scripts/hx.sh
-source ~/.fancy-prompt.sh
 
 #source ~/Scripts/bash-wakatime.sh
 
@@ -61,5 +60,3 @@ run_vdir() {
 alias ls="run_ls"
 alias dir="run_dir"
 alias vdir="run_vdir"steve=/home/arthur/Projects/editor/steve
-
-~/.vocab

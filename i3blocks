@@ -41,7 +41,6 @@ color=#A88FBC
 command=$HOME/Scripts/wifi.sh ; test -z "$BLOCK_BUTTON" || $HOME/Scripts/rofi_wifi.py
 markup=pango
 interval=20
-label=
 color=#ffffff
 
 [battery]

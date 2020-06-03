@@ -78,6 +78,11 @@ zplug "b4b4r07/enhancd", use:init.sh
 # fasd
 eval "$(fasd --init auto)"
 
+# zsh syntax highlight
+typeset -A ZSH_HIGHLIGHT_STYLES
+# To differentiate aliases from other command types
+ZSH_HIGHLIGHT_STYLES[comment]='fg=blue,bold'
+
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -103,7 +108,6 @@ eval "$(fasd --init auto)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias e="emacs -nw"
 alias snake="/home/arthur/Projects/snake/snake"
 alias mr_clean="~/Scripts/mr_clean_v2"
 alias bye="shutdown 0"
@@ -126,6 +130,8 @@ run_vdir() {
 	vdir-i --color=auto -w $(tput cols) "$@"
 }
 
+e() { emacs "$@" & }
+
 #  todos
 ccat "$HOME/todo.org"
 
@@ -138,8 +144,9 @@ alias finder="/home/arthur/Projects/finder/finder.py"
 alias signout="pkill -KILL -u $(whoami)"
 alias markdown="tm"
 #configuration
-alias zshconfig="emacs /home/arthur/.zshrc"
-alias i3config="emacs ~/.config/i3/config"
+alias zshconfig="e /home/arthur/.zshrc"
+alias i3config="e ~/.config/i3/config"
+alias ne="emacs -nw"
 # web dev
 alias flow="yarn flow"
 alias lint="yarn lint"
