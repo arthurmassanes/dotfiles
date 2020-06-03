@@ -22,12 +22,13 @@ for_window [class="^.*"] border pixel 6
 
 # My game in floating mode
 for_window [class="AI Bot Workspace"] floating enable
-for_window [class="Bomberman"] floating enable
+for_window [title="Bomberman"] floating enable
 
 for_window [class="Thunar"] floating enable
 for_window [class="feh"] floating enable
 for_window [title="Type Knight"] floating enable
-for_window [class="Microsoft Teams - Preview"] floating enable
+for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
+for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable
 for_window [class="VMPK-Virtual MIDI Piano Keyboard"] floating enable
 
 #gaps btween windows
