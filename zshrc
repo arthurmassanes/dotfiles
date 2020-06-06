@@ -130,7 +130,7 @@ run_vdir() {
 	vdir-i --color=auto -w $(tput cols) "$@"
 }
 
-e() { emacs "$@" & }
+e() { emacs "$@" &; disown "%emacs" }
 
 #  todos
 ccat "$HOME/todo.org"
