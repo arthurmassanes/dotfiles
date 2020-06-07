@@ -61,7 +61,8 @@ interval=1
 
 [volume]
 command=amixer sget Master | grep 'Right:' | awk -F'[][]' '{ print $2 }'
-interval=1
+interval=once
+signal=2
 
 #[home]
 #command=printf '\uf118   '

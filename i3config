@@ -262,6 +262,9 @@ default_border pixel 5
 # finds out, if available)
 
 bar {
+    mode dock
+    hidden_state show
+    modifier Mod4
     status_command i3blocks -c .config/i3blocks/config
     Position top
     font pango:"Font Awesome 4 Free", Solid 10
@@ -294,7 +297,7 @@ set $statuscmd i3blocks
 # Signal used to update the status line (used with -u, requires -t)
 #   i3blocks uses SIGRTMIN+10 by default
 #   i3status uses SIGUSR1 by default
-set $statussig SIGUSR1
+set $statussig RTMIN+2
 
 # Amount to increase/decrease volume as a percentage (used with -i, -d)
 
