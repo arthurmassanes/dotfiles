@@ -20,6 +20,11 @@ command=echo "" ; test -z "$BLOCK_BUTTON" || $HOME/Scripts/emu.sh
 interval=once
 color=white
 
+[updates]
+command=dnf check-update -q | sed -r '/^\s*$/d' | wc -l
+interval=600
+label=🔄
+
 [virus]
 command=$HOME/Scripts/coronavirus.sh
 interval=300
@@ -65,9 +70,9 @@ interval=once
 signal=2
 
 #[home]
-#command=printf '\uf118   '
+#command=printf '\uf100   '
 #color=#00ff00
-#interval=once
+#interval=1
 
 #[funky]
 #full_text=<span foreground="red" size="x-large">Roses</span> and <i><span color="#EE37B8">violets</span></i>!
