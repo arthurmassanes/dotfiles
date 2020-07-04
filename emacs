@@ -1,5 +1,4 @@
 ;; Arthur 2020
-;; salut max;)
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -210,3 +209,21 @@ There are two things you can do about this warning:
 ;; which key cheatsheet
 (require 'which-key)
 (which-key-mode)
+
+(ido-mode t)
+(setq ido-everywhere            t
+      ido-enable-prefix         nil
+      ido-enable-flex-matching  t
+      ido-auto-merge-work-directories-length nil
+      ;;ido-use-filename-at-point t
+      ido-max-prospects         10
+      ido-create-new-buffer     'always
+      ;; ido-use-virtual-buffers   t
+      ;; ido-handle-duplicate-virtual-buffers 2
+      ido-default-buffer-method 'selected-window
+      ido-default-file-method   'selected-window)
+(setq ido-decorations (quote ("\n-> " "" "\n " "\n ..." "[" "]" "
+  [No match]" " [Matched]" " [Not readable]" " [Too big]" "
+  [Confirm]")))
+(defun ido-disable-line-truncation () (set (make-local-variable 'truncate-lines) nil))
+(add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-truncation)
