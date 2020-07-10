@@ -32,6 +32,7 @@ There are two things you can do about this warning:
     (company-bbdb company-eclim company-semantic company-clang company-xcode company-cmake company-capf company-files
                   (company-dabbrev-code company-gtags company-etags company-abbrev company-clang)
                   company-oddmuse company-dabbrev)))
+ '(completion-auto-help (quote lazy))
  '(custom-enabled-themes (quote (gruvbox-dark-hard)))
  '(custom-safe-themes
    (quote
