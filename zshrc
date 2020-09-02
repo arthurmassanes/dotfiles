@@ -132,6 +132,10 @@ run_vdir() {
 
 e() { emacs "$@" &; disown "%emacs" }
 
+function fixdate() {
+    sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+}
+
 #  todos
 ccat "$HOME/todo.org"
 
@@ -178,4 +182,3 @@ alias simplescreenrecorder="simplescreenrecorder --no-systray"
 alias rick="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
 alias gameoflife="~/Projects/gameOfLife/gameOfLife maps/blank.map"
 alias cal="cal --monday"
-alias fixdate="sudo date -s \"$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z\""
