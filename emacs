@@ -208,7 +208,12 @@ There are two things you can do about this warning:
 (add-to-list 'company-backends 'company-c-headers)
 
 (add-hook 'prog-mode-hook 'dumb-jump-mode)
-(global-set-key (kbd "M-.") 'dumb-jump-go)
+;; To go back use
+(defun dumb-jump-and-message()
+  (interactive)
+  (dumb-jump-go)
+  (message "dumb-jump says: Use C-M-p to go back"))
+(global-set-key (kbd "M-.") 'dumb-jump-and-message)
 
 ;; which key cheatsheet
 (require 'which-key)
