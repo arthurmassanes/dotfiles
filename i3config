@@ -246,7 +246,6 @@ exec --no-startup-id nitrogen --set-zoom-fill ~/Pictures/hiroshi-nagai.jpg
 exec_always compton --config /home/arthur/.config/compton.conf
 exec_always pgrep volumeicon || /usr/bin/volumeicon
 # exec_always wal -R
-exec_always sleep 3 && ~/.todo.sh
 
 # Color schemes
 set_from_resource $fg i3wm.color7
