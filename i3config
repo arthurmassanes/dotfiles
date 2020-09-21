@@ -31,6 +31,7 @@ for_window [title="Type Knight"] floating enable
 for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
 for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable
 for_window [class="VMPK-Virtual MIDI Piano Keyboard"] floating enable
+for_window [class="babel"] floating enable
 
 #gaps btween windows
 gaps inner 10
