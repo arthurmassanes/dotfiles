@@ -139,6 +139,8 @@ function fixdate() {
 #  todos
 ccat "$HOME/todo.org"
 
+alias geary="flatpak run org.gnome.Geary"
+alias copy="xclip -selection clipboard"
 alias ls="run_ls"
 alias la="ls -a"
 alias dir="run_dir"
