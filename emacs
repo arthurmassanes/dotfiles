@@ -49,7 +49,7 @@ There are two things you can do about this warning:
  '(package-check-signature nil)
  '(package-selected-packages
    (quote
-    (yaml-mode dockerfile-mode org-bullets htmlize selectric-mode dumb-jump which-key company-irony-c-headers company-c-headers company-irony company irony wakatime-mode dracula-theme doom-themes rebecca-theme purple-haze-theme xresources-theme neotree yasnippet zone-nyan multiple-cursors smartparens powerline expand-region gruvbox-theme ace-jump-mode)))
+    (haskell-mode smart-hungry-delete sublimity yaml-mode dockerfile-mode org-bullets htmlize selectric-mode dumb-jump which-key company-irony-c-headers company-c-headers company-irony company irony wakatime-mode dracula-theme doom-themes rebecca-theme purple-haze-theme xresources-theme neotree yasnippet zone-nyan multiple-cursors smartparens powerline expand-region gruvbox-theme ace-jump-mode)))
  '(pdf-view-midnight-colors (quote ("#282828" . "#f9f5d7")))
  '(rustic-ansi-faces
    ["#282a36" "#ff5555" "#50fa7b" "#f1fa8c" "#61bfff" "#ff79c6" "#8be9fd" "#f8f8f2"])
@@ -247,3 +247,4 @@ There are two things you can do about this warning:
 ;; Dockerfile support
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+(setq create-lockfiles nil)
