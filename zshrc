@@ -185,4 +185,3 @@ alias rick="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/m
 alias gameoflife="~/Projects/gameOfLife/gameOfLife maps/blank.map"
 alias cal="cal --monday"
 alias tripvm="ssh jimarthuros@54.36.205.145"
-[[ /usr/bin/kubectl ]] && source <(kubectl completion zsh)
