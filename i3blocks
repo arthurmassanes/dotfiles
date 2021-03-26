@@ -15,6 +15,11 @@
 #interval=20
 #color=#D44638
 
+[foot]
+command=$HOME/foot.sh
+interval=once
+color=#ffffff
+
 [gba]
 command=echo "" ; test -z "$BLOCK_BUTTON" || $HOME/Scripts/emu.sh
 interval=once
@@ -24,6 +29,11 @@ color=white
 command=dnf check-update -q | sed -r '/^\s*$/d' | wc -l
 interval=600
 label=🔄
+
+[coinbase]
+command=$HOME/Scripts/coinbase.py
+interval=60
+color=#c99d66
 
 [virus]
 command=$HOME/Scripts/coronavirus.sh

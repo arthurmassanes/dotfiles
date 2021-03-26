@@ -131,6 +131,7 @@ run_vdir() {
 }
 
 e() { emacs "$@" &; disown "%emacs" }
+disown_feh() { feh "$@" &; disown }
 
 function fixdate() {
     sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
@@ -153,6 +154,7 @@ alias markdown="tm"
 alias zshconfig="e /home/arthur/.zshrc"
 alias i3config="e ~/.config/i3/config"
 alias ne="emacs -nw"
+alias feh="disown_feh"
 # web dev
 alias flow="yarn flow"
 alias lint="yarn lint"

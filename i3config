@@ -61,6 +61,8 @@ bindsym --release Print exec "~/Scripts/screenshot.sh"
 
 bindsym $mod+K exec "~/Scripts/kbd.sh"
 
+bindsym $mod+O exec "~/Scripts/foot/foot.sh"
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -76,7 +78,7 @@ bindsym $mod+K exec "~/Scripts/kbd.sh"
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st -f "mono:pixelsize=24:antialias=true:autohint=true"
+bindsym $mod+Return exec st -f "mono:pixelsize=24:antialias=true:autohint=true" -e scroll
 bindsym $mod+Shift+Return exec st -e "fish"
 
 # kill focused window
