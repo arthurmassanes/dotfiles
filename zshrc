@@ -189,3 +189,4 @@ alias cal="cal --monday"
 alias tripvm="ssh jimarthuros@54.36.205.145"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+alias glga="git log --stat --author arthur"
