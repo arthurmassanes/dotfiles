@@ -60,3 +60,5 @@ run_vdir() {
 alias ls="run_ls"
 alias dir="run_dir"
 alias vdir="run_vdir"steve=/home/arthur/Projects/editor/steve
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
