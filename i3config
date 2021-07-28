@@ -34,6 +34,7 @@ for_window [class="VMPK-Virtual MIDI Piano Keyboard"] floating enable
 for_window [class="babel"] floating enable
 for_window [class="RType"] floating enable
 for_window [class="R-Type"] floating enable
+for_window [title="Picture-in-Picture"] sticky enable
 
 #gaps btween windows
 gaps inner 10
