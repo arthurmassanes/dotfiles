@@ -114,6 +114,7 @@ alias bye="shutdown 0"
 alias l="ls -1"
 alias battery="~/Scripts/battery.sh"
 alias meteo="curl -s wttr.in"
+alias diff="diff --color=always"
 
 # for fancy icons
 LS_COLORS=$(ls_colors_generator)
