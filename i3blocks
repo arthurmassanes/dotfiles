@@ -27,7 +27,7 @@ color=white
 
 [updates]
 command=dnf check-update -q | sed -r '/^\s*$/d' | wc -l
-interval=600
+interval=60
 label=🔄
 
 [coinbase]
