@@ -139,7 +139,8 @@ function fixdate() {
 }
 
 #  todos
-ccat "$HOME/todo.org"
+# setopt local_options no_monitor
+zsh -c "hr . && tb && hr ."
 
 alias geary="flatpak run org.gnome.Geary"
 alias copy="xclip -selection clipboard"
