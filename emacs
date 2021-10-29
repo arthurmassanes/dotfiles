@@ -159,6 +159,7 @@ There are two things you can do about this warning:
 (setq dashboard-items '((recents  . 5)
                         (bookmarks .10)))
 (setq dashboard-set-file-icons t)
+(setq dashboard-startup-banner 'logo)
 
 (sp-pair "'" "'") ;; normal quote bug
 (setq echo-keystrokes 0.1) ;; instantly show keystrokes
