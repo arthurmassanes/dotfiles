@@ -244,3 +244,6 @@
 #    urgency = normal
 #
 # vim: ft=cfg
+
+# Defines action of mouse event
+mouse_middle_click = do_action
