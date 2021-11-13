@@ -42,7 +42,7 @@ gaps outer 10
 #smart_gaps on
 
 # kanye
-# bindsym $mod+Shift+p exec $HOME/Scripts/ye.sh
+bindsym $mod+Shift+p exec $HOME/Scripts/ye.sh
 
 # clipboard
 bindsym $mod+P exec $HOME/Scripts/clipboard.sh
@@ -66,8 +66,6 @@ bindsym --release Print exec "~/Scripts/screenshot.sh"
 
 bindsym $mod+K exec "~/Scripts/kbd.sh"
 
-bindsym $mod+O exec "~/Scripts/foot/foot.sh"
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -83,7 +81,7 @@ bindsym $mod+O exec "~/Scripts/foot/foot.sh"
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st -f "mono:pixelsize=24:antialias=true:autohint=true" -e scroll
+bindsym $mod+Return exec st -f "Iosevka Term:pixelsize=24:antialias=false:autohint=true" -e scroll
 bindsym $mod+Shift+Return exec st -e "fish"
 
 # kill focused window
@@ -252,9 +250,11 @@ bindsym XF86MonBrightnessDown exec ~/Scripts/light.sh U #brigthness down
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-exec --no-startup-id nitrogen --set-zoom-fill ~/Pictures/hiroshi-nagai.jpg
+exec --no-startup-id nitrogen --set-zoom-fill ~/Pictures/wallpaper.jpg
 exec_always compton --config /home/arthur/.config/compton.conf
 exec_always pgrep volumeicon || /usr/bin/volumeicon
+# start touch gestures
+exec_always libinput-gestures-setup start
 # exec_always wal -R
 
 # make xclip listen for copy
