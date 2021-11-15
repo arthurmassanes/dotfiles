@@ -18,7 +18,7 @@ bindsym $mod+Escape exec $HOME/Scripts/lock.sh
 # is used In the bar {} block below.
 font pango: Unifont 12
 
-for_window [class="^.*"] border pixel 6
+for_window [class="^.*"] border pixel 4
 
 # My game in floating mode
 for_window [class="AI Bot Workspace"] floating enable
@@ -40,6 +40,10 @@ for_window [title="Picture-in-Picture"] sticky enable
 gaps inner 10
 gaps outer 10
 #smart_gaps on
+################# i3-radius #######################
+smart_borders on
+# smart_borders no_gaps
+border_radius 5
 
 # kanye
 bindsym $mod+Shift+p exec $HOME/Scripts/ye.sh
@@ -47,6 +51,8 @@ bindsym $mod+Shift+p exec $HOME/Scripts/ye.sh
 # clipboard
 bindsym $mod+P exec $HOME/Scripts/clipboard.sh
 
+# HDMI display
+bindsym $mod+Shift+H exec $HOME/Scripts/displays.sh
 
 #gaps increase
 bindsym $mod+B exec /home/arthur/.config/i3/scripts/toggle_gaps.sh
@@ -235,7 +241,7 @@ bindsym $mod+Shift+Ctrl+Left resize grow width 5 px or 5 ppt
 
 
 # move focused workspace between monitors
-bindsym $mod+Shift+H move container to output HDMI-1
+# bindsym $mod+Shift+H move container to output HDMI-1
 bindsym $mod+Shift+G move workspace to output left
 
 # Pulse Audio controls
