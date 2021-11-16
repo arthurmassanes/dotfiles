@@ -18,7 +18,7 @@ bindsym $mod+Escape exec $HOME/Scripts/lock.sh
 # is used In the bar {} block below.
 font pango: Unifont 12
 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 5
 
 # My game in floating mode
 for_window [class="AI Bot Workspace"] floating enable
