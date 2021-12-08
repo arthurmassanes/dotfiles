@@ -27,7 +27,7 @@ label=🔄
 
 [ethereum]
 command=$HOME/Scripts/eth.sh
-interval=5
+interval=120
 color=#c99d66
 
 [meteo]
